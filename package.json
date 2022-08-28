@@ -1,0 +1,25 @@
+{
+  "name": "pro-team-profile-generator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/colinmichael89/PRO-Team-Profile-Generator.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/colinmichael89/PRO-Team-Profile-Generator/issues"
+  },
+  "homepage": "https://github.com/colinmichael89/PRO-Team-Profile-Generator#readme",
+  "devDependencies": {
+    "jest": "^29.0.1"
+  },
+  "dependencies": {
+    "inquirer": "^9.1.0"
+  }
+}
