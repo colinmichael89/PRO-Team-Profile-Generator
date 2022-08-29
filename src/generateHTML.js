@@ -10,6 +10,62 @@ function generateHTML(data) {
   </head>
   <body>
     <h1>Team Profile Builder</h1>
+    <div class="row">
+  <div class="col-sm-6">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">${getRole(Employee)}</h5>
+        <ul class="list-group list-group-flush">
+    <li class="list-group-item">Name: ${employee.name}</li>
+    <li class="list-group-item">ID: ${employee.id}</li>
+    <li class="list-group-item">Email: <a href={mailto:${
+      employee.email
+    }}</a></li>
+  </ul>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-6">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">${getRole(Manager)}</h5>
+        <ul class="list-group list-group-flush">
+        <li class="list-group-item">Name: ${manager.name}</li>
+        <li class="list-group-item">ID: ${manager.id}</li>
+        <li class="list-group-item">Email: ${manager.email}</li>
+        <li class="list-group-item">Office #: ${manager.officeNumber}</li>
+      </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-sm-6">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">${getRole(Engineer)}</h5>
+        <li class="list-group-item">Name: ${engineer.name}</li>
+        <li class="list-group-item">ID: ${engineer.id}</li>
+        <li class="list-group-item">Email: ${engineer.email}</li>
+        <li class="list-group-item">Github: ${engineer.github}</li>
+      </ul>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-6">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">${getRole(Intern)}</h5>
+        <ul class="list-group list-group-flush">
+        <li class="list-group-item">Name: ${intern.name}</li>
+        <li class="list-group-item">ID: ${intern.id}</li>
+        <li class="list-group-item">Email: ${intern.email}</li>
+        <li class="list-group-item">School: ${intern.school}</li>
+  </ul>
+      </div>
+    </div>
+  </div>
+</div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
   </body>
 </html>
