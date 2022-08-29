@@ -175,6 +175,45 @@ const promptIntern = () => {
     .prompt([
       {
         type: "input",
+        name: "name",
+        message: "Enter Intern's's name",
+        validate: (nameInput) => {
+          if (nameInput) {
+            return true;
+          } else {
+            console.log(`Employee name is required`);
+            return false;
+          }
+        },
+      },
+      {
+        type: "input",
+        name: "id",
+        message: "Enter employee ID",
+        validate: (idInput) => {
+          if (idInput) {
+            return true;
+          } else {
+            console.log(`Employee ID is required`);
+            return false;
+          }
+        },
+      },
+      {
+        type: "input",
+        name: "email",
+        message: "Enter employee email address",
+        validate: (emailInput) => {
+          if (emailInput) {
+            return true;
+          } else {
+            console.log(`Email address is required`);
+            return false;
+          }
+        },
+      },
+      {
+        type: "input",
         name: "school",
         message: "Enter intern's school",
         validate: (schoolInput) => {

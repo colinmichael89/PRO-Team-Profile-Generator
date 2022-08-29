@@ -1,4 +1,4 @@
-function generateHTML(data) {
+function generateHTML(answers) {
   return `
     <!doctype html>
 <html lang="en">
@@ -14,52 +14,46 @@ function generateHTML(data) {
   <div class="col-sm-6">
     <div class="card">
       <div class="card-body">
-        <h5 class="card-title">${getRole(Employee)}</h5>
-        <ul class="list-group list-group-flush">
-    <li class="list-group-item">Name: ${employee.name}</li>
-    <li class="list-group-item">ID: ${employee.id}</li>
-    <li class="list-group-item">Email: <a href={mailto:${
-      employee.email
-    }}</a></li>
-  </ul>
-      </div>
-    </div>
-  </div>
-  <div class="col-sm-6">
-    <div class="card">
-      <div class="card-body">
-        <h5 class="card-title">${getRole(Manager)}</h5>
+        <h5 class="card-title">${getRole()}</h5>
         <ul class="list-group list-group-flush">
         <li class="list-group-item">Name: ${manager.name}</li>
         <li class="list-group-item">ID: ${manager.id}</li>
-        <li class="list-group-item">Email: ${manager.email}</li>
+        <li class="list-group-item">Email: <span id="email"><a href="mailto:${
+          manager.email
+        }"</a></span></li>
         <li class="list-group-item">Office #: ${manager.officeNumber}</li>
       </ul>
       </div>
     </div>
   </div>
-</div>
-<div class="row">
   <div class="col-sm-6">
     <div class="card">
       <div class="card-body">
-        <h5 class="card-title">${getRole(Engineer)}</h5>
+        <h5 class="card-title">${getRole()}</h5>
         <li class="list-group-item">Name: ${engineer.name}</li>
         <li class="list-group-item">ID: ${engineer.id}</li>
-        <li class="list-group-item">Email: ${engineer.email}</li>
-        <li class="list-group-item">Github: ${engineer.github}</li>
+        <li class="list-group-item">Email: <span id="email"><a href="mailto:${
+          engineer.email
+        }"</a></span></li>
+        <li class="list-group-item">Github: <span id="github"><a href="http://github.com/${
+          engineer.github
+        }">${engineer.github}</a></span></li>
       </ul>
       </div>
     </div>
   </div>
+  </div>
+  <div class="row">
   <div class="col-sm-6">
     <div class="card">
       <div class="card-body">
-        <h5 class="card-title">${getRole(Intern)}</h5>
+        <h5 class="card-title">${getRole()}</h5>
         <ul class="list-group list-group-flush">
         <li class="list-group-item">Name: ${intern.name}</li>
         <li class="list-group-item">ID: ${intern.id}</li>
-        <li class="list-group-item">Email: ${intern.email}</li>
+        <li class="list-group-item">Email: <span id="email"><a href="mailto:${
+          intern.email
+        }"</a></span></li>
         <li class="list-group-item">School: ${intern.school}</li>
   </ul>
       </div>
