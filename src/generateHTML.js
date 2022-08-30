@@ -22,6 +22,7 @@ const generateHTML = (team) => {
     <div class="card" style="width: 18rem;">
       <div class="card-body">
         <h5 class="card-title">Engineer</h5>
+        <ul class="list-group list-group-flush">
         <li class="list-group-item">Name: ${engineer.name}</li>
         <li class="list-group-item">ID: ${engineer.id}</li>
         <li class="list-group-item">Email: <span id="email"><a href="mailto:${engineer.email}">${engineer.email}</a></span></li>
@@ -74,6 +75,7 @@ module.exports = (team) => {
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <title>Bootstrap demo</title>
       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+      <link rel="stylesheet" href="../dist/style.css">
     </head>
     <body>
     <header>
@@ -86,5 +88,3 @@ module.exports = (team) => {
   </body>
 </html>`;
 };
-
-module.exports = generateHTML;
