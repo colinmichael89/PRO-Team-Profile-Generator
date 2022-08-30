@@ -6,6 +6,10 @@ const Manager = require(`./lib/Manager`);
 const Engineer = require(`./lib/Engineer`);
 const Intern = require(`./lib/Intern`);
 const generateHTML = require(`./src/generateHTML`);
+const path = require(`path`);
+
+const OUTPUT_DIR = path.resolve(__dirname, "dist");
+const outputPath = path.join(OUTPUT_DIR, "team.html");
 
 const teamMembers = [];
 
@@ -238,7 +242,11 @@ const promptIntern = () => {
     });
 };
 const generateTeam = () => {
-  fs.writeFile("team.html", generateHTML(teamMembers), (err) =>
+  // Create output directory if it does not exist
+  if (!fs.existsSync(OUTPUT_DIR)) {
+    fs.mkdirSync(OUTPUT_DIR);
+  }
+  fs.writeFile(outputPath, generateHTML(teamMembers), (err) =>
     err ? console.log(err) : console.log("Successfully created Team Profile!")
   );
 };
