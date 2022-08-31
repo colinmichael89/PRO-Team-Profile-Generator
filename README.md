@@ -25,9 +25,7 @@ npm i
 
 ## Demonstration
 
-Link to video demo and/or embedded video
-
-Anyone can use this repository
+[Video Demonstration](https://drive.google.com/file/d/1Bg9uITcEIK9m3cFp7D-rTuAeWkNjy3cU/view)
 
 ## License
 
